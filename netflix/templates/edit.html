@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {%block title%} Home {%endblock%} {%block content%}
+<center>
+  <div class="card" style="width: 18rem; margin-top: 25px">
+    <img
+      class="card-img-top"
+      src="{{m.img.url}}"
+      width="486"
+      height="300px"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{m}}
+        <h6>{{m.year}}</h6>
+      </h5>
+      <a href="{%url 'update' m.id %}" class="btn btn-dark">Update</a>
+      <a href="{%url 'delete' m.id %}" class="btn btn-danger">Delete</a>
+    </div>
+  </div>
+</center>
+{%endblock%}
